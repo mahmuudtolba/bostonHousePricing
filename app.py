@@ -1,12 +1,12 @@
-import pickle_1
+import pickle
 from flask import Flask , request , app , jsonify , url_for , render_template 
 import numpy as np
 import pandas as pd
 
 app = Flask(__name__)
 ## Load the model
-regmodel = pickle_1.load(open('regmodel.pkl', 'rb'))#read byte mode
-scaler  = pickle_1.load(open('scaling.pkl', 'rb'))
+regmodel = pickle.load(open('regmodel.pkl', 'rb'))#read byte mode
+scaler  = pickle.load(open('scaling.pkl', 'rb'))
 @app.route('/')
 def home():
     return render_template('home.html')
