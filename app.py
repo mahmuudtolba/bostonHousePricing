@@ -10,7 +10,7 @@ regmodel = pickle.load(open('regmodel.pkl', 'rb'))#read byte mode
 scaler  = pickle.load(open('scaling.pkl', 'rb'))
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('main.html')
 
 
 
@@ -21,7 +21,7 @@ def predict_api():
     print(np.array(list(data.values())).reshape(1,-1))
     new_data=scaler.transform(np.array(list(data.values())).reshape(1,-1))
     output=regmodel.predict(new_data)
-    return render_template('home.html' ,prediction_text = f"The House Price Prediction is {output}")
+    return render_template('main.html' ,prediction_text = f"The House Price Prediction is {output}")
 
 
 
