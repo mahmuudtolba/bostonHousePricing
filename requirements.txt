@@ -1,7 +1,6 @@
 Flask
 sklearn
-pandas 
-matplotlib
+pandas
 numpy
-seaborn
+matplotlib
 gunicorn
