@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('log') {
+    stage('Build') {
       steps {
-        sh 'ls -la'
+        sh 'docker build -t mahmuudtolba/jenkins_docker . '
       }
     }
 
