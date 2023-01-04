@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('code checkout') {
+    stage('Checkout Code') {
       steps {
         git(url: 'https://github.com/mahmuudtolba/autoencoder.git', branch: 'main')
       }
