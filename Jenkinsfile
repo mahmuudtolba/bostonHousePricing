@@ -9,7 +9,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker build -t mahmuudtolba/jenkins_docker . '
+        bat 'docker build -t mahmuudtolba/jenkins_docker . '
       }
     }
 
